@@ -1,0 +1,155 @@
+(ChatGPT)
+pentru 1)
+
+la fisa cerintei s-a folosit prompt-ul:
+Descrie o fisa a cerintelor pentru un site de tip e-commerce (actori si scenarii de utilizare)
+
+rezultat de la ChatGPT:
+1) descrierea problemei
+se dorește realizarea unei platforme e-commerce care permite utilizatorilor să caute, să vizualizeze, să compare și să cumpere produse online. sistemul trebuie să gestioneze conturi de utilizator, produse, comenzi, plăți și livrări. platforma trebuie să ofere o interfață intuitivă, sigură și eficientă, atât pentru clienți, cât și pentru administratori și vânzători.
+scopul aplicației este de a facilita procesul de vânzare-cumpărare online și de a automatiza gestionarea produselor, comenzilor și livrărilor.
+
+2) actori
+vizitator – utilizator neautentificat care poate naviga pe site și vizualiza produsele
+client – utilizator autentificat care poate plasa comenzi și gestiona contul personal
+administrator – gestionează platforma, utilizatorii și conținutul
+vânzător – adaugă și administrează produsele proprii
+curier – livrează comenzile către clienți
+sistem de plată – procesează tranzacțiile financiare
+
+3) scenarii de utilizare (doar descriere)
+creare cont – utilizatorul își creează un cont nou pe platformă
+autentificare – utilizatorul se conectează în sistem
+vizualizare produse – utilizatorul explorează lista de produse
+căutare produse – utilizatorul caută produse folosind filtre și cuvinte-cheie
+adăugare în coș – clientul adaugă produse în coșul de cumpărături
+plasare comandă – clientul finalizează cumpărăturile și trimite comanda
+efectuare plată – clientul achită contravaloarea comenzii
+urmărire comandă – clientul verifică statusul livrării
+gestionare produse – vânzătorul adaugă, modifică sau șterge produse
+gestionare utilizatori – administratorul administrează conturile utilizatorilor
+procesare comenzi – administratorul și vânzătorul gestionează comenzile
+livrare comandă – curierul livrează produsele
+
+scop: folosit pentru a modela in mod general actorii si scenariile pentru a le detalia in mod particular pentru tema noastra (emag.ro)
+
+
+pentru 2)
+
+prompt-ul:
+
+Creaza codul plantuml pentru o diagrama use-case pentru urmatorele specificatii:
+actorii:
+vizitator – utilizator neautentificat care poate naviga pe site și vizualiza produsele
+client – utilizator autentificat care poate plasa comenzi și gestiona contul personal
+administrator – gestionează platforma, utilizatorii și conținutul
+vânzător – adaugă și administrează produsele proprii
+curier – livrează comenzile către clienți
+sistem de plată – procesează tranzacțiile financiare
+use case-uri:
+vizitator:
+vizualizare produse
+căutare produse
+creare cont
+
+client:
+autentificare
+adăugare în coș
+plasare comandă
+efectuare plată
+urmărire comandă
+gestionare cont
+administrator:
+gestionare utilizatori
+gestionare produse
+gestionare comenzi
+generare rapoarte
+
+vânzător:
+adăugare produs
+modificare produs
+ștergere produs
+procesare comenzi
+
+curier:
+preluare comandă
+livrare comandă
+actualizare status livrare
+sistem de plată:
+procesare plată 
+
+
+
+rezultat:
+@startuml
+left to right direction
+skinparam actorStyle awesome
+
+actor Vizitator
+actor Client
+actor Administrator
+actor "Vânzător" as Vanzator
+actor Curier
+actor "Sistem de plată" as SistemPlata
+
+rectangle Platforma {
+  (vizualizare produse) as vp
+  (căutare produse) as cp
+  (creare cont) as cc
+
+  (autentificare) as aut
+  (adăugare în coș) as ac
+  (plasare comandă) as pc
+  (efectuare plată) as ep
+  (urmărire comandă) as uc
+  (gestionare cont) as gc
+
+  (gestionare utilizatori) as gu
+  (gestionare produse) as gp
+  (gestionare comenzi) as gcom
+  (generare rapoarte) as gr
+
+  (adăugare produs) as ap
+  (modificare produs) as mp
+  (ștergere produs) as sp
+  (procesare comenzi) as prc
+
+  (preluare comandă) as plc
+  (livrare comandă) as lc
+  (actualizare status livrare) as asl
+
+  (procesare plată) as pp
+}
+
+Vizitator --> vp
+Vizitator --> cp
+Vizitator --> cc
+
+Client --> aut
+Client --> ac
+Client --> pc
+Client --> ep
+Client --> uc
+Client --> gc
+
+Administrator --> gu
+Administrator --> gp
+Administrator --> gcom
+Administrator --> gr
+
+Vanzator --> ap
+Vanzator --> mp
+Vanzator --> sp
+Vanzator --> prc
+
+Curier --> plc
+Curier --> lc
+Curier --> asl
+
+SistemPlata --> pp
+Client --> pp
+
+@enduml
+
+
+scop: din nou, s-a folosit ai pentru a genera schema principala peste care se detaliaza schema (schema finala arata destul de diferit)

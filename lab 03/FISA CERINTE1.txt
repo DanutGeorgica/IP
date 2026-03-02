@@ -1,0 +1,60 @@
+FISA CERINTE
+
+1) DESCRIERE
+Se dorește realizarea unei platforme e-commerce care permite utilizatorilor să caute, să vizualizeze și să cumpere produse online. Sistemul trebuie să gestioneze conturi de utilizator, produse, comenzi, plăți și livrări. Platforma trebuie să ofere o interfață intuitivă, sigură și eficientă, atât pentru clienți, cât și pentru administratori și vânzători. Scopul aplicației este de a facilita procesul de vânzare-cumpărare online și de a automatiza gestionarea produselor, comenzilor și livrărilor.
+
+
+2) ACTORI
+- Vizitator: utilizator neautentificat care poate naviga pe site și vizualiza produsele
+- Client: utilizator autentificat care poate plasa comenzi și gestiona contul personal
+- Administrator: gestionează platforma, utilizatorii și conținutul
+- Vânzător: adaugă și administrează produsele proprii
+- Curier: livrează comenzile către clienți
+- Sistem de plată: procesează tranzacțiile financiare
+
+
+3) SCENARII DE UTILIZARE
+
+I. Vizitator
+a) creare/intrare cont – vizitatorul își creează un cont nou pe platformă sau intră în contul său
+b) vizualizare produse – vizitatorul explorează lista de produse
+c) căutare produse – vizitatorul caută produse folosind filtre și cuvinte-cheie
+
+II. Client
+a) creare cont – clientul își creează un cont nou pe platformă
+b) vizualizare produse – clientul explorează lista de produse
+c) căutare produse – clientul caută produse folosind filtre și cuvinte-cheie
+d) gestionare coș – clientul adaugă/șterge produse în coșul de cumpărături
+e) plasare comandă – clientul finalizează cumpărăturile și trimite comanda
+f) efectuare plată – clientul achită contravaloarea comenzii
+g) urmărire comandă – clientul verifică statusul livrării
+h) gestionare cont - clientul modifica datele personale
+
+III. Administrator
+a) gestionare utilizatori – administratorul gestionează conturile utilizatorilor
+b) procesare comenzi – administratorul gestionează comenzile, verifică disponibilitatea produselor, gestioneaza modalitaţile de plată şi livare
+c) gestionare produse - administratorul validează dacă un produs poate fi vândut sau nu pe site
+d) generare rapoarte - administratorul poate să genereze rapoarte despre produse
+
+
+IV. Vânzător
+a) gestionare produse – vânzătorul adaugă, modifică sau șterge produsele proprii
+b) procesare comenzi – vânzătorul gestionează comenzile produselor proprii
+
+V. Curierul
+a) preluare comandă - curierul preia o comandă procesată
+b) actualizare status livrare - modifică statusul comenzii
+c) livrare comandă – curierul livrează comanda
+
+VI. Sistem de Plată
+a) procesare plată - efectuarea şi verificarea plăţii
+
+
+
+
+
+
+
+
+
+
